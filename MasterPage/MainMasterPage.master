@@ -1,0 +1,93 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MasterPage_MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>设备馆管理系统首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <link href="../css.css" rel="stylesheet" type="text/css"/>
+</head>
+<body bgcolor="#DDDDDD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center">
+<form runat="server">
+  <table id="__01" width="914" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td rowspan="5" bgcolor="#DDDDDD">&nbsp;</td>
+	    <td height="118" valign="bottom" background="../images/index_02.gif" style="width: 776px"><table width="280" height="30" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="daohang1">当前操作员：<asp:Label ID="labAdmin" runat="server"></asp:Label>！</td>
+          </tr>
+        </table></td>
+	    <td rowspan="5" bgcolor="#DDDDDD" style="width: 68px">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="26" valign="top" style="width: 776px; background-color: #ffffff;"><table width="777" height="26" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="182" align="center" bgcolor="#65D7D4" class="css"><span class="daohang1"><asp:Label ID="labDate" runat="server" Font-Size="9pt" ForeColor="Black"></asp:Label>&nbsp;
+            <asp:Label ID="labXQ" runat="server" Font-Size="9pt" ForeColor="Black"></asp:Label></span></td>
+          <td width="588" align="center" bgcolor="#42BAB6" class="daohang1">
+<asp:Menu ID="menuNav" runat="server" BackColor="#42BAB6" DynamicHorizontalOffset="2"
+                Font-Names="宋体" Font-Size="9pt" ForeColor="White" Orientation="Horizontal"
+                StaticSubMenuIndent="10px" OnMenuItemClick="menuNav_MenuItemClick" DynamicPopOutImageTextFormatString="">
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                <DynamicMenuStyle BackColor="#42BAB6" />
+                <StaticSelectedStyle BackColor="#1C5E55" />
+                <DynamicSelectedStyle BackColor="#1C5E55" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <Items>
+                    <asp:MenuItem Text="首页" Value="首页" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="系统设置" Value="系统设置">
+                        <asp:MenuItem Text="实验室信息" Value="实验室信息" NavigateUrl="~/SysSet/EqumentInfo.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="用户设置" Value="用户设置" NavigateUrl="~/SysSet/AdminManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="所属管理" Value="所属设置" NavigateUrl="~/SysSet/BCaseManage.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="学生管理" Value="学生管理">
+                        <asp:MenuItem Text="学生类型管理" Value="学生类型管理" NavigateUrl="~/ReaderManage/RTypeManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="学生档案管理" Value="学生档案管理" NavigateUrl="~/ReaderManage/ReaderManage.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="设备管理" Value="设备管理">
+                        <asp:MenuItem Text="设备类型管理" Value="设备类型管理" NavigateUrl="~/BookManage/BTypeManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="设备档案管理" Value="设备档案管理" NavigateUrl="~/BookManage/BookManage.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="设备借还" Value="设备借还">
+                        <asp:MenuItem Text="设备租借" Value="设备租借" NavigateUrl="~/BookBRManage/BorrowBook.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="设备归还" Value="设备归还" NavigateUrl="~/BookBRManage/ReturnBook.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="设备领取" Value="设备领取" NavigateUrl="~/BookBRManage/OutEqument.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="系统查询" Value="系统查询">
+                        <asp:MenuItem Text="设备档案查询" Value="设备档案查询" NavigateUrl="~/SysQuery/BookQuery.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="设备租借查询" Value="设备租借查询" NavigateUrl="~/SysQuery/BBorrowQuery.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="设备预定查询" Value="设备预定查询" NavigateUrl="~/SysQuery/EReserveQuery.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="排行榜" Value="排行榜">
+                        <asp:MenuItem Text="设备租借排行榜" Value="设备租借排行榜" NavigateUrl="~/SortManage/BookBorrowSort.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="学生租借排行榜" Value="学生租借排行榜" NavigateUrl="~/SortManage/ReaderBorrowSort.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="设备预定" Value="设备预定" NavigateUrl="~/BookBRManage/ReserveEqument.aspx"></asp:MenuItem> 
+                    <asp:MenuItem Text="退出系统" Value="退出系统">
+                         <asp:MenuItem Text="更改口令" Value="更改口令" NavigateUrl="~/Common/ChanagePwd.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+            </asp:Menu>          
+            </td>
+        </tr>
+      </table></td>
+    </tr>
+            <tr>
+                <td style="width: 776px; height: 231px; background-color: #ffffff;">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 776px; background-image: url(../images/index_14.gif); height: 66px;">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>

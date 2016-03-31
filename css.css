@@ -1,0 +1,37 @@
+.daohang1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height:20px;
+	color: #000000;
+}
+.daohanglianjie:link {
+    font-family:"宋体";
+	font-size:12px;
+	line-height:16px;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.daohanglianjie:visited {
+    font-family:"宋体";
+	font-size:12px;
+	line-height:16px;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.daohanglianjie:hover {
+    font-family:"宋体";
+	font-size:12px;
+	line-height:16px;
+	color:#FD9500;
+	text-decoration:none;
+}
+.daohanglianjie:active {
+    font-family:"宋体";
+	font-size:12px;
+	line-height:16px;
+	color:#FD9500;
+	text-decoration:none;
+}
+.waikuang {
+    border:#DFEAF2 1px solid;
+}
